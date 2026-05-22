@@ -25,6 +25,12 @@ Use uma hospedagem com:
 - MySQL
 - permissao de escrita na pasta `data`
 
+Opcoes comuns:
+
+- Hospedagem compartilhada com cPanel
+- Hostinger, Locaweb, KingHost, HostGator ou similar
+- VPS com Apache/Nginx + PHP + MySQL
+
 ## 3. Configurar banco
 
 No servidor, edite:
@@ -47,3 +53,22 @@ const DB_PASS = 'senha_do_banco';
 O sistema salva treinos, progresso, peso e corridas em arquivos JSON dentro de `data`.
 
 No servidor, garanta que essa pasta exista e tenha permissao de escrita.
+
+O arquivo `data/.htaccess` bloqueia acesso direto aos dados em hospedagens Apache/cPanel.
+
+## 5. Enviar arquivos para a hospedagem
+
+Em hospedagem cPanel:
+
+1. Acesse o painel da hospedagem.
+2. Entre em `Gerenciador de Arquivos`.
+3. Abra a pasta `public_html`.
+4. Envie os arquivos do projeto para dentro dela.
+5. Garanta que a pasta `data` exista.
+6. Ajuste a permissao da pasta `data` para permitir escrita pelo PHP.
+
+Se a hospedagem tiver Git Deploy, use o repositório:
+
+```text
+git@github.com:almeidabs/Academy.git
+```
