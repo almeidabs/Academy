@@ -1,0 +1,16 @@
+# Dados locais do sistema
+data/*.json
+data/sessions/
+
+# Mantem a pasta data versionada sem enviar dados reais
+!data/.gitkeep
+
+# Arquivos temporarios do sistema operacional/editor
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Dependencias/ferramentas futuras
+vendor/
+node_modules/
